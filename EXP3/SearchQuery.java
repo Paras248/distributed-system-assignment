@@ -11,15 +11,10 @@ public class SearchQuery extends UnicastRemoteObject
     }
  
     // Implementation of the query interface
-    public String query(String search)
+    public String query(int[] search)
                        throws RemoteException
     {
-        String result;
-        if (search.equals("Reflection in Java"))
-            result = "Found";
-        else
-            result = "Not Found";
- 
-        return result;
+        int result = search[0] + search[1];
+        return String.valueOf(result);
     }
 }

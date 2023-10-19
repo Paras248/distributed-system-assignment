@@ -6,18 +6,13 @@ public class SearchServer
     {
         try
         {
-            // Create an object of the interface
-            // implementation class
+            
             Search obj = new SearchQuery();
  
-            // rmiregistry within the server JVM with
-            // port number 1900
             LocateRegistry.createRegistry(1900);
  
-            // Binds the remote object by the name
-            // geeksforgeeks
             Naming.rebind("rmi://localhost:1900"+
-                          "/geeksforgeeks",obj);
+                          "/ds",obj);
         }
         catch(Exception ae)
         {

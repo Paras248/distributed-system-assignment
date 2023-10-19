@@ -1,5 +1,5 @@
 import java.rmi.*;
 public interface Search extends Remote
 {
-    public String query(String search) throws RemoteException;
+    public String query(int[] search) throws RemoteException;
 }
